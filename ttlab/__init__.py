@@ -11,6 +11,11 @@ __author__ = "Eugene Hsu"
 def info():
     return "TTLAB Semiconductor analysis and simulation package"
 
+# Ensure all key modules are included in API docs
 __all__ = [
-    "FedDataFetcher"
+    "ERC224",
+    "ECC133",
+    "silvacoVD",
+    "characterization",
+    "semi_physics",
 ]
