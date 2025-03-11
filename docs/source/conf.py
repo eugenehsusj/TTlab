@@ -1,25 +1,28 @@
+# Configuration file for the Sphinx documentation builder.
+#
+# For the full list of built-in configuration values, see the documentation:
+# https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-import os
-import sys
+# -- Project information -----------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-# Ensure Sphinx can find your package
-sys.path.insert(0, os.path.abspath("../../ttlab"))  # Adjust if your package is in a different location
+project = 'ttlab'
+copyright = '2025, Eugene Hsu'
+author = 'Eugene Hsu'
+release = '0.1.0'
 
-# Project information
-project = "TTLab"
-author = "Eugene Hsu"
-release = "0.1.0"
+# -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-# Sphinx Extensions
-extensions = [
-    "sphinx.ext.autodoc",        # Auto-generate documentation from docstrings
-    "sphinx.ext.napoleon",       # Support Google-style docstrings
-    "sphinx.ext.viewcode",       # Add links to source code
-]
+extensions = []
 
-# Theme settings
-html_theme = "sphinx_rtd_theme"
-
-# Paths
-templates_path = ["_templates"]
+templates_path = ['_templates']
 exclude_patterns = []
+
+
+
+# -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+
+html_theme = 'alabaster'
+html_static_path = ['_static']
