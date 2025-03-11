@@ -1,16 +1,14 @@
-.. ttlab documentation master file, created by
-   sphinx-quickstart on Tue Mar 11 16:15:09 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. ttlab documentation master file, created by sphinx-quickstart.
 
-Welcome to ttlab's documentation!
+Welcome to TTLAB's Documentation!
 =================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
+   modules  # This will include your module list
+   api      # This will include your auto-generated API docs
 
 Indices and tables
 ==================
