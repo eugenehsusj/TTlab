@@ -1,0 +1,28 @@
+site_name: Ecrypto library
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: false
+            extra:
+              doctring_style: google
+
+nav:
+  - Home: index.md
+  - Fetcher: api.md
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: amber
+  font:
+    text: Roboto
+    code: Roboto Mono
+    features:
+      - "liga"          # Enable ligatures
+      - "tnum"          # Tabular numbers for code
