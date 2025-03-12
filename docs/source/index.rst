@@ -7,8 +7,7 @@ Welcome to TTLAB's Documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   modules  # This will include your module list
-   api      # This will include your auto-generated API docs
+   ttlab
 
 Indices and tables
 ==================
