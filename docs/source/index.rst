@@ -7,6 +7,7 @@ Welcome to TTLAB's Documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   modules
    ttlab
 
 Indices and tables
