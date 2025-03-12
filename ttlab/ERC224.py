@@ -128,16 +128,23 @@ def read_mdm_multiple(filename, var):
     return data_dict
 
 
-def mdm2df(fpath):
+def mdm2df(fpath) -> _pd.DataFrame:
     """
     Converts MDM formatted data to a pandas DataFrame.
 
-    Parameters:
-    fpath (str): The file path of the MDM file to be parsed.
+    Args:
+        fpath (str): The file path of the MDM file to be parsed.
 
     Returns:
-    pandas.DataFrame: A DataFrame containing the structured data from the MDM file.
+        A DataFrame containing the structured data from the MDM file.
+
+    Examples:
+        Using this function to extract data
+
+        >>> mdm2df("file_directory_path.mdm")
+        >>> print(data.head())
     """
+
     mode = None
     with open(fpath, 'r') as file:
         for line in file:

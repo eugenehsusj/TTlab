@@ -8,11 +8,15 @@ plugins:
           options:
             show_source: false
             extra:
+              docstring_section_style: table
               doctring_style: google
+              docstring_options:
+                ignore_init_summary: true
+                trim_doctest_flags: true
 
 nav:
   - Home: index.md
-  - Fetcher: api.md
+  - API: api.md
 
 theme:
   name: material
