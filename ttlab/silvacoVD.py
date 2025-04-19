@@ -10,6 +10,7 @@ Created on Fri Jan 15 09:36:42 2025
 from pathlib import Path as _Path
 import pandas as _pd
 import re as _re
+import os as _os
 
 # Function that reads Silvaco Log
 def read_victory_log_to_dataframe(file_path):
@@ -56,14 +57,19 @@ def read_all_logs_in_directory(directory):
             skip_hidden = True
             continue
         # Extract metadata from the file name
+        try:
+            df = read_victory_log_to_dataframe(log_file)
+        except Exception as e:
+            print(f"Error reading {log_file}: {e}")
+            continue
+        filename = log_file.stem
+        simulation_name = filename.split("_")[0]
+        df["name"] = simulation_name
         matches = _re.findall(pattern, log_file.stem)
         if matches:
-            df = read_victory_log_to_dataframe(log_file)
             for key, value in matches:
                 df[key] = value
-            all_data.append(df)
-        else:
-            print("Not match:", log_file)
+        all_data.append(df)
     
     # Concatenate all DataFrames into a single DataFrame
     final_df = _pd.concat(all_data, ignore_index=True)
