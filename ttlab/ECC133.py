@@ -18,11 +18,11 @@ def check_type(fpath):
     with open(fpath, mode="r") as file:
         reader = _csv.reader(file, delimiter=",")
         for row in reader:
-            if row[0].strip() == "SetupTitle":
+            if row[0].strip() == "PrimitiveTest":
                 setuptitle = row[1].strip()
                 break
     if setuptitle is None:
-        print("Error: 'SetupTitle' not found in the file.")
+        print("Error: 'PrimitiveTest' not found in the file.")
     return setuptitle
 
 def find_var2(fpath):
